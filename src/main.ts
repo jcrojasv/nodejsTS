@@ -1,5 +1,9 @@
-function say(message: string): void {
-  console.log(`I said: ${message}`);
-}
+import express, { Request, Response } from 'express';
 
-say('hello');
+const app = express();
+const port = 3000;
+
+
+app.get("/", (req: Request, res: Response) => res.send('Hello world').json());
+
+app.listen(port, () => console.log(`Listen on port: ${port}`));
