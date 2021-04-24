@@ -1,10 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const app = express_1.default();
+require("reflect-metadata");
+const server_1 = require("./core/server");
 const port = 3000;
-app.get("/", (req, res) => res.send('Hello world').json());
-app.listen(port, () => console.log(`Listen on port: ${port}`));
+server_1.server.build()
+    .listen(port, () => console.log(`Listen on port: ${port}`));
