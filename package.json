@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node dist/main.js",
+    "start": "tsc && node dist/main.js -r dotenv/config",
     "start:watch": "nodemon"
   },
   "keywords": [],
@@ -18,9 +18,12 @@
   },
   "dependencies": {
     "body-parse": "^0.1.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "inversify": "^5.0.5",
     "inversify-express-utils": "^6.3.2",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.2",
+    "typeorm": "^0.2.32"
   }
 }
